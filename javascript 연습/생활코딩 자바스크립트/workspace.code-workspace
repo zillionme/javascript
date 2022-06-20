@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\..\\DOITJS"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\제로초JS"
+		}
+	],
+	"settings": {
+		"editor.tabSize": 2
+	}
+}

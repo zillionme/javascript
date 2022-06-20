@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>다음 배열에서 ‘라’를 모두 제거하세요 indexOf와 splice를 사용하세요</h3>
+    <script>
+        const arr = ['가', '라', '다', '라', '마', '라']
+        let i = 0 ; 
+        while(arr.indexOf('라') !== -1){
+            if(arr.indexOf('라') === i){
+                arr.splice(i,1)
+            }
+            i++;
+        }
+        document.write(arr)
+    </script>
+</body>
+</html>

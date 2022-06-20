@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+</head>
+<body>
+    <h1>객체. object</h1>
+    <h2>create</h2>
+    <script>
+        var coworkers = {
+            "programmer":"egoing",
+            "designer":"leezche"
+        };
+        document.write(coworkers.programmer+'<br>');
+        coworkers['data scientist'] = "taeho";
+        document.write(coworkers['data scientist']);
+    </script>
+
+    <h2>iterate</h2>
+    <script>
+        for(var key in coworkers){
+            document.write(key+'<br/>')
+        }
+        for(var key in coworkers){
+            document.write(coworkers[key]+'<br/>')
+        }
+    </script>
+
+    <h2>property & method</h2>
+    <script>
+        coworkers.showAll = function(){
+            for(var key in this) {
+                document.write(key +" : " + this[key]+'<br/>')
+            }
+        }
+        this.showAll();
+    </script>
+
+
+</body>
+</html>

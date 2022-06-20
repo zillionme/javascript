@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // for(i=0 ; i<100 ; i = i+2){
+        //     document.write(i+1 +'<br/>')
+        // }
+
+        // i가 2n+1에서 2n역할. i =2n= 0. 2. 4. 6 등
+        // 만약 식이 2i+1 이라면 i의 범위를 선정하기 어려워 짐 
+
+        // for(i=1 ; i<101 ; i++){
+        //     if(i%2 === 0) continue;
+        //     document.write(i+'<br/>');
+        // }
+
+        for(let i=0 ; i<100 ;){
+            i++
+            if(i%2 === 0) {continue;}
+            document.write(i)
+        }
+
+
+        for(let i = 0 ; i < 5 ; i++){
+            if(i%2 === 0) continue;
+            for(let j = 0 ; j < 5 ; j++){
+                if(j%2 === 0) continue;
+                for(let k = 0 ; k < 5 ; k++){
+                    if(k%2 === 0) continue;
+                    document.write("("+i+', '+ j+', '+ k+")")
+                }
+            }
+        }
+    </script>
+
+    <h3>구구단을 출력하되. 짝수가 하나도 나오지 않게 해보세요</h3>
+    <script>
+        for(let i = 0 ; i < 10 ; i++){
+            document.write("<p>")
+            if(i%2 === 0) continue;
+            for(let j = 0 ; j < 10 ; j++){
+                if(j% 2 === 0) continue;
+                document.write(i+"*"+j+"="+i*j+"<br/>")
+            }
+            document.write("</p>")
+        }
+    </script>
+
+    <h3>별 5개 찍어보세요</h3>
+    <script>
+        for(let i = 0 ; i < 6 ; i++){
+            for(let j = 0 ; j < i ; j++){
+                document.write('*')
+            }
+                document.write('<br/>')
+        }
+    </script>
+
+    <h3>거꾸로 별 5개 찍어보세요</h3>
+    <script>
+        for(let i = 0 ; i < 5 ; i++){
+            document.write('*'.repeat(5-i)+'<br/>')
+        }
+
+        for(let i  = 5 ; i >=1 ; i--){
+            document.write('*'.repeat(i)+'<br/>')
+        }
+    </script>
+    <h3>1,3,5,7,9 별과 거꾸로 별을 찍어보세요</h3>
+    <script>
+        for(let i = 0 ; i < 10 ; i++){
+            if(i%2 === 0) continue;
+            document.write('*'.repeat(i)+'<br/>');
+        }
+
+        document.write('<br/>')
+        for(let i = 0 ; i < 10 ; i++){
+            if(i%2 === 0) continue;
+            document.write('*'.repeat(10-i)+'<br/>');
+        }        
+    </script>
+
+    <h3>5 4 3 2 1들여쓰기 별을 찍어보세요</h3>
+    <script>
+        for(let i = 0 ; i < 5 ; i++){
+            document.write('&nbsp'.repeat(i));
+            document.write('*'.repeat(5-i)+'<br/>')
+        }        
+    </script>
+
+    <h3>1 2 3 4 5들여쓰기 별을 찍어보세요</h3>
+    <script>
+        for(let i = 0 ; i < 5 ; i++){
+            document.write('&nbsp'.repeat(5-i));
+            document.write('*'.repeat(i+1)+'<br/>')
+        }
+    </script>
+    <h3>트리 별을 찍어보세요</h3>
+    <script>
+        for(let i = 0 ; i < 10 ; i++){
+            if(i%2 === 0) continue;
+            document.write('&nbsp'.repeat( (9-i)/2 ) + "*".repeat(i) +'<br/>');
+        }
+    </script>
+    
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Loop & Array</h1>
+    <script>
+      var coworkers = ['egoing','leezche','duru','taeho'];     
+    </script>
+    <h2>Co workers</h2>
+    <ul>
+        <script>
+        var i = 0 ;
+        while(i < coworkers.length){
+        document.write('<li><a href=“http://a.com/‘+coworkers[i]+’”>'+coworkers[i]+'</a></li>');        
+        i=1+i;}
+        </script>
+        </ul>
+
+        <h2>어서오세요</h2>
+        <script>
+          var name = prompt('이름을 입력해주세요')
+          document.write(name+'님 환영합니다')
+        </script>
+
+</body>
+</html>

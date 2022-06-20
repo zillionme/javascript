@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+  <!-- <h1>입력한 값이 3의 배수인가</h1>
+  <script>
+    var number3 = prompt('숫자를 입력하세요', '');
+    if(number3 !== null){
+    if(number3%3 === 0){
+    document.write(number3 + '는 3의 배수입니다')} 
+    else{
+    document.write(number3 + '는 3의 배수가 아닙니다')  
+    }
+  }
+  </script>
+
+    <h1>!!조건 연산자!! 입력한 값이 5의 배수인가</h1>
+    <script>
+      var number5 = prompt('숫자를 입력하세요', '');
+      (number5 !== null) ?document.write(number5 + '는 5의 배수입니다')
+                         : document.write(number5 + '는 5의 배수가 아닙니다')   
+  </script> -->
+
+  <!-- <h2>논리연산자 OR 연산자. 둘 중하나가 10보다 작은지?</h2>
+  <script>
+    var userNumber1 = prompt('첫번째 숫자를 입력하세요')
+    var userNumber2 = prompt('두번째 숫자를 입력하세요')
+    if(userNumber1<50 || userNumber2<50){
+    document.write('숫자 둘 중 최소 하나는 10 미만입니다')
+    }
+    else{
+    document.write('숫자 둘 중 최소 하나는 10 미만이 아닙니다') 
+    }
+  </script> -->
+
+  <!-- <h2>어느곳으로 이동하시겠습니까</h2>
+  <script>
+    var session = prompt('어느 부서로 이동하시겠습니까? (1- 마케팅, 2-개발, 3-디자인')
+    switch(session) {
+      case '1' : document.write('<p>마케팅 부서는 201호 입니다<p/>');
+      break;
+      case '2' : document.write('<p>개발 부서는 202호 입니다<p/>');
+      break;
+      case '3' : document.write('<p>디자인 부서는 203호 입니다<p/>');
+      break;
+      default : if(confirm('잘못 입력하셨습니다')) 
+        {session}
+                else
+                {session}
+                }
+  </script> -->
+
+  <!-- <h2>몇 줄이 필요한가요?</h2>
+   <script>
+     var peopleNum = prompt('입장객 수가 어떻게 되나요?');
+     var coulmnNum = prompt('몇 명씩 앉을까요?');
+    if(peopleNum%coulmnNum === 0)
+      rowNum = peopleNum/coulmnNum;
+    else
+      rowNum = parseInt(peopleNum/coulmnNum+1);
+    
+     document.write(peopleNum+'명이 한 줄에 '+coulmnNum+'명씩 앉는다면, <br/>'+rowNum+'줄이 필요합니다')
+   </script> -->
+
+  <h2>5개 숫자 더하기</h2>
+  <!-- <script>
+    var sum = 0 ;
+    var i = 1 ;
+    while(i<6){
+      document.write(sum+i);
+      i=i+1;
+    }
+  </script> -->
+  <script>
+    var sum = 0;
+    for(i = 1; i < 6; i+1){
+      sum += i;
+    }    
+  </script>
+</body>
+</html>
