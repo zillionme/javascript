@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>preventDefault메서드 사용하기</h1>
+  <input type="checkbox" name="체크" id="id-checkbox">
+  <div id="output-box"></div>
+
+  <script> 
+  //preventDefault 매서드 사용한 것.
+    document.querySelector("#id-checkbox").addEventListener("click", function(event) {
+    document.getElementById("output-box").innerHTML += "죄송합니다! <code>preventDefault()</code> 때문에 체크할 수 없어요!<br>";
+    event.preventDefault();
+  }, false);
+  </script>
+
+
+
+  <h1>1. js에서 이벤트 핸들러 등록 시 return false 사용해서 링크 사용하지 않기</h1>
+  <a href="https://www.naver.com" id="link">링크1</a>
+
+  <script>
+    document.querySelector('#link').onclick = function(){return false;};
+  </script>
+
+
+
+  <h1>2. js에서 이벤트 핸들러 등록시, preventDefault() 사용해서 링크 사용하지 않기</h1>
+  <a href="https://www.naver.com" id="link2">링크2</a>
+  <script>
+    document.querySelector('#link2').onclick = event.preventDefault
+  </script>
+
+-
+
+
+</body>
+</html>

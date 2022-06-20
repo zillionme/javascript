@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #multiple{
+            display: inline-block;
+            height: 30px;
+            width: 200px;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        table, td {
+            border: 1px solid #ccc;
+            border-collapse: collapse;    
+        }
+        table{border-bottom: 0; border-right: 0;}
+
+
+    </style>
+</head>
+<body>
+    <h3> 총 몇 줄이 필요한가?</h3>
+    <script>
+        var menNum = prompt("입장할 사람 수");
+        var columnNum = prompt("한 줄당 앉을 사람 수");
+        if(menNum%columnNum === 0 ){
+            rowNum = parseInt (menNum/columnNum);
+        }
+        else{
+            rowNum = parseInt (menNum/columnNum) + 1;
+        };
+        document.write('모두 '+ rowNum +'개의 줄이 필요합니다')  ;      
+    </script>
+
+    <h3>좌석배치도2 :  while문으로 좌석번호 부여하기</h3>
+    <script>
+        var i = 1;
+        while(i <= menNum){
+            if(i%columnNum !== 0){
+                document.write('<span id=multiple>좌석'+i+'</span>');
+                 i++;}
+            else{
+                document.write('<div id=multiple>좌석'+i+'</div><br/>')
+                i++;
+            }
+        }
+    </script>
+
+    <h3>중첩 for문으로 좌석번호 부여하기</h3>
+    
+    <script>
+        document.write('<table>')
+        for(i=0 ; i< rowNum ; i++){
+            document.write('<tr>')
+            for(j=1 ; j<= columnNum; j++){
+                seatnNo = i * columnNum + j;  //좌석번호
+            
+                 if(seatnNo>menNum) break;
+                 document.write('<td>좌석 '+seatnNo+' </td>');
+            };
+            document.write('</tr>');           //줄바꾸기
+        }
+        document.write('</table>')
+    </script>
+</body>
+</html>

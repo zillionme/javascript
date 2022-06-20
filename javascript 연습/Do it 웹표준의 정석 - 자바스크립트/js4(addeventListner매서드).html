@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <img src="알을깨는비담.gif" alt="">
+
+  <script>
+    let pic1 = document.querySelector('img');
+    
+    pic1.onmouseover = function() {
+      pic1.setAttribute('src' , '화랑비담.gif')
+    }
+
+    pic1.addEventListener('mouseout', originPic)
+
+    function originPic() {
+      pic1.src = "알을깨는비담.gif"
+    }
+
+  </script>
+</body>
+</html>
+
+pic1.addEventListener('mouseover', changePic)
+
+function changePic() {
+  pic1.src = "화랑비담.gif";
+}

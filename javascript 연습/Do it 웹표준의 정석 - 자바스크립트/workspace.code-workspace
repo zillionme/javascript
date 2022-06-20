@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\생활코딩 자바스크립트"
+		},
+		{
+			"path": "..\\..\\..\\..\\팝업창-메인창 연결"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Do it 웹표준의 정석 - 자바스크립트"
+	}
+}

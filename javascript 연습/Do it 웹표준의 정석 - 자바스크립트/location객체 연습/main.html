@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>여기는 메인창 입니다</h1>
+  <script>
+    //오픈된 자식창을 pop1이라는 변수에 담는다
+    let pop1 = open("pop1.html" , "팝업창", "height=500, width=400");
+    pop1.opener = window.self;
+
+  </script>
+</body>
+</html>

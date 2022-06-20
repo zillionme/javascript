@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <button id="change">글자색 바꾸기</button>
+  <p id="pin" style="color: black;"> 부럽다. 푸른 꿈이 있는 덕만도.
+    덕만이 푸른 꿈 그 자체인 비담을 가진 덕만이. 
+    
+    나도 나 자체가 푸른 꿈인 그런 사람. 그냥 꿈속에서라도. 만나고 싶다.
+    크게 사랑받고, 크게 사랑해주고. 혹여 끝이 비극이라도. 그냥 크게 사랑하고. 끝내보고 싶다. 
+  </p>
+
+  <script>
+    function changeColor(){
+    document.querySelector("#pin").style.color= 'red' ;
+    };
+
+    let changeBt = document.querySelector("#change");
+    changeBt.onclick = changeColor;
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="container">
+    <h1>DOM을 공부합시다</h1>
+    <a href="#">더보기</a>
+    <div id="info">
+
+    </div>
+  </div>
+
+  <script>
+document.querySelector('a').onclick = function(){
+  let newP = document.createElement("p");
+  let txtNode = document.createTextNode("DOM은 Document Object Model의 줄임말입니다.");
+  newP.appendChild(txtNode);
+  document.querySelector('#info').appendChild(newP);
+};
+
+document.querySelector('a').addEventListener('click', function (){this.onclick=''})
+
+    //href = "#"은 아무것도 실행하지 않지만, 페이지 최상단으로 이동한다.
+    //href ="none"은 아무것도 실행하지 않고, 페이지를 움직이지도 않는다.
+  </script>
+</body>
+</html>

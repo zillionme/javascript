@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>체크박스를 클릭해주세요.</p>
+
+<form>
+  <label for="id-checkbox">체크박스:</label>
+  <input type="checkbox" id="id-checkbox"/>
+</form>
+
+<div id="output-box"></div>
+
+<script>
+  document.querySelector("#id-checkbox").addEventListener("click", function(event) {
+         document.getElementById("output-box").innerHTML += "죄송합니다! <code>preventDefault()</code> 때문에 체크할 수 없어요!<br>";
+         event.preventDefault();
+}, false);
+</script>
+</body>
+</html>

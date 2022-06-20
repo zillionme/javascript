@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #lightbox {
+      border-width: 6px;
+      border-style: solid;
+    }
+    ul {
+      list-style: none;
+    }
+    li {display: inline-table;}
+    #box{
+      position: fixed;
+      top:50%;
+      left: 50%;
+      transform:translate(-50%, -50%);  /* 요소를 화면 중앙에 표시하기 위해 이동 */
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <ul>
+      <li><img src="고민.gif" class="pic"></li>
+      <li><img src="놀람.gif" class="pic"></li>
+      <li><img src="흥미진진.gif" class="pic"></li>
+      <li><img src="모조리.gif" class="pic"></li>
+      <li><img src="무명.gif" class="pic"></li>
+      <li><img src="세상에 나온.gif" class="pic"></li>
+    </ul>
+  </div>
+  
+  <div id="box">
+    <img src="흥미진진.gif" id="lightbox">
+  </div>
+
+  
+  <script>
+    let pics = document.querySelectorAll('.pic');
+    let lightbox = document.querySelector('#lightbox');
+    let box = document.querySelector('#box')
+
+    for(i=0; i<pics.length ; i++){
+      pics[i].addEventListener('click', showLightbox)
+    };
+
+    
+
+    function showLightbox(){
+      lightbox.setAttribute('src', this.getAttribute('src')) ;
+      box.style.display = "block";
+    };
+    
+    box.onclick = function(){
+      box.style.display = "none"
+    }
+
+
+
+
+
+  </script>
+
+</body>
+</html>

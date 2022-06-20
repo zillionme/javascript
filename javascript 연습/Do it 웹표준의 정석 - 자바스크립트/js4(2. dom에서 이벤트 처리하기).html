@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>클릭시 알림창</h1>
+  <img src="star.jpg" id="star" style="width:20%">
+
+  <script>
+    let star = document.querySelector('#star')
+    star.onclick = function(){
+      alert('이미지를 클릭하였습니다.')
+    }
+  </script>
+
+
+
+
+  <h1>클릭시 이미지 바꾸기</h1>
+  <img src="초기비담.gif" id="firstB">
+
+  <script>
+    // //함수로 만들어서 사용
+    // let firstB = document.querySelector('#firstB');
+
+    // firstB.onclick = changePic
+    // function changePic(){
+    //   firstB.src = "알을깨는비담.gif"
+    // }
+
+
+    // 함수 직접 연결
+    // firstB.onclick = function(){
+    //   firstB.setAttribute( "src", "알을깨는비담.gif");
+    // }
+
+
+    // 클릭한 위치 알아내기
+    firstB.onclick = function(){
+      alert('이벤트 유형 : '+ event.type + ', 이벤트 발생위치 : '+ event.pageX+' , '+event.pageY)
+    }
+
+    let event2 = event.button
+    
+  </script>
+</body>
+</html>

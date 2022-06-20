@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 텍스트 필드에 입력한 값을 화면에 표시하기 -->
+  <h1>Web Programming</h1>
+  <p>공부할 주제를 기록해 보세요</p>
+
+  <input type="text" id="input">
+  <input type="submit" value="입력" onclick="register(); return false; ">
+
+  <ul id="history"></ul>
+
+
+
+  <script>
+    // 버튼을 클릭하면 입력한 내용이 화면에 표시
+
+
+    function register() {
+      let history = document.querySelector('#history')
+      let newLi = document.createElement('li');
+      let input = document.querySelector('#input');
+      let txtNode = document.createTextNode(input.value);
+
+      newLi.appendChild(txtNode);
+      history.appendChild(newLi);
+      // history.insertBefore( newLi, history.childNodes[0] );
+
+      input.value = "";
+
+      let list = document.querySelectorAll('li');
+      for (i = 0; i < list.length; i++) {
+        list[i].addEventListener('click', remove)
+      }
+      function remove() {
+        this.parentNode.removeChild(this);
+      
+      }
+    }
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>이벤트 당첨자 뽑기 프로그램</h1>
+  <script>
+    Math.floor(Math.random()*100+1);
+  </script>
+
+  <h1>응모자수에 따른 이벤트 당첨자 뽑기 프로그램</h1>
+  <script>
+    let seed = prompt('전체 응모자수');
+    let pick = Math.floor((Math.random()*seed)+1);
+    
+    document.write("전체 응모자수 : " + seed + "명<br/>");
+    document.write("당첨자 : "+ pick + "번")
+  </script>
+
+  <h2>내 버전</h2>
+  <script>    
+    let userNum = parseInt(prompt('응모자 수를 입력하세요'));
+    let lottoNum = Math.floor(Math.random()*100+1);
+
+    while(0<100){
+      let lottoNum = Math.floor(Math.random()*100+1);
+      if(lottoNum <= userNum){
+        document.write(lottoNum);
+        break;
+      }
+    }
+    </script>
+</body>
+</html>

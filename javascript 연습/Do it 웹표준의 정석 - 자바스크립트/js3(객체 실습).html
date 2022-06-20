@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>객체 인스턴스 만들기</h1>
+  <script>
+    let now = new Date();
+    document.write("현재 시각은 "+now);
+  </script>
+
+  <h1>인스턴스와 메서드 사용하기</h1>
+  <script>
+    document.write(now.toLocaleString());
+  </script>
+
+  <h1>배열 만들고 요소 표시하기</h1>
+  <script>
+    let numbers = ['일', '이', '삼', '사']
+    document.write(numbers.length + "<br/>")
+    for(i=0 ; i<numbers.length ; i++){
+      document.write(numbers[i] +"<br/>")
+    }
+
+    numbers = ['오']
+  </script>
+  
+  <h1>date 객체</h1>
+  <script>
+    let clock = new Date;
+    document.write(clock.toLocaleDateString())
+  </script>
+
+  <h1>며칠째 책을 읽고 있는가?</h1>
+  <script>
+    let today = new Date("2022-04-18");
+    let firstday = new Date("2022-04-11");
+
+    let howLong = (today.getTime() - firstday.getTime())/(1000*60*60*24)+1;
+
+    document.write(howLong+'일 째 책을 읽고 있어요!')
+  </script>
+
+  <h1>오일러 상수, 원주율</h1>
+  <script>
+    document.write(Math.E+'<br>')
+    document.write(Math.PI)
+  </script>
+
+</body>
+</html>

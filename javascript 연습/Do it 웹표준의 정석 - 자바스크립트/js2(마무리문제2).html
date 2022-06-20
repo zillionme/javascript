@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>프롬프트 창에서 두수 입력받아, 크기를 서로 비교하여 더 큰 숫자를 알림창에 표시하는 함수</h1>
+  <script>
+    let numX = parseInt(prompt("비교할 첫번째 숫자"));
+    let numY = parseInt(prompt("비교할 두번째 숫자"));
+    function compare(x,y) {
+      if(x > y){
+        document.write(x+'가'+y+'보다 더 큽니다')
+      }
+      else if(x === y){
+        document.write(x+'와'+y+'는 같습니다')
+      }
+      else{
+        document.write(y+'가'+x+'보다 더 큽니다')
+      }
+    };
+
+    compare(numX, numY);
+  </script>
+
+</body>
+</html>

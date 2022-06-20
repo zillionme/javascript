@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="inntext()">innerText로 표시하기</button>
+  <button onclick="innhtml()">innerHTML로 표시하기</button>
+  <h1>현재 시각</h1>
+  <div id="current"></div>
+
+
+  <script>
+    let now = new Date()
+    function inntext (){
+      document.querySelector('#current').innerText = now;
+    }
+    function innhtml(){
+      document.querySelector('#current').innerHTML = "<em>" +now + "</em>";
+    }
+  </script>
+
+
+    <h1>이미지 속성값</h1>
+    <img id ="cup" src="star.jpg" alt="몰라용">
+
+    <script>
+      let take = document.querySelector('#cup').getAttribute('src');
+      document.write(take)
+    </script>
+  
+</body>
+</html>

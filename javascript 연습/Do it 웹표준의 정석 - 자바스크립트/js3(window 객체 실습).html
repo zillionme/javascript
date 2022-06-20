@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <H1>로컬스토리지 반환하기</H1>
+  <script>
+    document.write(window.localStorage);
+    document.write(window.location)
+  </script>
+  <script>
+    let pop1 = open("팝업창.html", "hello world!" , "width=500, height = 400")
+    if(pop1 === null){
+      alert("팝업창이 차단되어 있습니다. 팝업차단을 해제해 주세요^^*")
+    }
+
+    pop1.creator = self ;          //pop1 객체의 부모가 자신임을 알려줌
+  </script>
+</body>
+</html>

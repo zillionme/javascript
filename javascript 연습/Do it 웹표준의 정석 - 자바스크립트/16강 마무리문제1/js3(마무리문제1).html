@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>현재시각 <span id="current" ></span></p>
+  <script>
+    setInterval(displayNow, 1000);
+      let time = new Date();
+
+
+      let gethour = time.getHours()
+      function ampm(){
+        if(gethour < 12){
+          return '오전'
+        }
+        else{
+          return '오후'
+        }
+      };
+      function hour(){
+        if(gethour === 0){
+          return 12
+        }
+        else if(gethour < 13){
+          return gethour
+        }
+        else{
+          return (gethour-12)
+        }
+      };
+      function minute() {
+        return time.getMinutes()
+      };
+      function second() {
+        return time.getSeconds()
+      };
+
+
+      let currentTime = ampm()+" "+hour()+" : " + minute() + " : "+second();
+      
+      function displayNow(){
+      document.querySelector('#current').innerHTML = currentTime;
+    }    
+    
+  </script>
+</body>
+</html>

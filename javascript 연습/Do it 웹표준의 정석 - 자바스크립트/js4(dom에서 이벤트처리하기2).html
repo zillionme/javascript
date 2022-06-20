@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>클릭시 이미지 바꾸기</h1>
+  <img src="초기비담.gif" id="firstB">
+  
+  <script>
+    let pic = document.querySelector('#firstB')
+    let picSrc = pic.getAttribute('src')
+
+    if(picSrc === "초기비담.gif"){
+      pic.onclick = function(){
+        pic.setAttribute('src', "알을깨는비담.gif");
+        picSrc = "알을깨는비담.gif";
+      }
+    }
+    else if(picSrc === "알을깨는비담.gif"){
+      pic.onclick = function(){
+        pic.setAttribute('src', "초기비담.gif");
+        picSrc = "초기비담.gif"
+      }
+    }
+
+  </script>
+</body>
+</html>

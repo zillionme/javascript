@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #figure {
+      border-width: 2px;
+      border-color: black;
+      border-style: solid;
+      width: 200px;
+      height: 200px;
+      position: relative;
+      left: 20%;
+
+    }
+  </style>
+</head>
+<body>
+  <div id="figure">  </div>
+
+  <script>
+    let figure = document.querySelector('#figure');
+
+    figure.addEventListener('mouseover', toCircle);
+    figure.addEventListener('mouseout', toSquare);
+
+    function toCircle(){
+      figure.style. borderRadius ="50%";      
+      figure.style.backgroundColor= "green"
+    };
+    function toSquare(){
+      figure.style.borderRadius="";
+      figure.style.backgroundColor="";
+    };
+
+  </script>
+</body>
+</html>

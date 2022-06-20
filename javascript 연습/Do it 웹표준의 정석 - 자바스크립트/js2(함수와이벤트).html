@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>연습1</h1>
+  <script>
+    function add(num1, num2) {
+      num1 + num2;
+    };
+    document.write(add(1,3));
+  </script>
+
+  <h1>연습2</h1>
+  <script>
+    function add(num1, num2) {
+      let sum = num1 + num2;
+      return sum;
+    };
+    document.write(add(1,3));
+  </script>
+
+  <h1>연습3</h1>
+  <script>
+    function add(num1, num2) {
+      return num1 + num2;
+    };
+    document.write(add(1,3));
+  </script>
+
+  <h1>곱셈연습1</h1>
+  <script>
+    function multi(x,y,z){
+      x*y*z
+    }
+   document.write(multi(1,2,3))
+  </script>
+
+  <h1>1부터 n까지 더하는 함수</h1>
+  <script>
+    function totalSum(n){
+      let sum = 0 ;
+      for(i=1 ; i<=n ; i++){
+        sum += i;
+      };
+      return sum;
+    }
+    document.write(totalSum(5))
+  </script>
+
+  <h1> 즉시실행 함수</h1>
+  <script>
+    function add(c,d){ 
+      c+d; 
+    };
+    document.write(add(10,20));
+
+    (function(a,b){ sum = a+b }(10,20));
+    document.write(sum)
+  </script>
+
+  <h1>익명함수</h1>
+  <script>
+    let sum = function(a,b) { a+b };
+    document.write(sum(10,20));
+  </script>
+
+  <h1>이벤트1</h1>
+  <input type="button" value="알림창" onclick="alert('경고')">
+  <input type="button" value="밤되기" onclick="bbg('red')">
+  <script>
+    function bbg(color){
+      document.querySelector('body').style.backgroundColor = 'color';
+    };
+  </script>
+  
+
+</body>
+</html>
